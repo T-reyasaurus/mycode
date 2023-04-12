@@ -1,0 +1,6 @@
+apple
+pear
+grapes
+starfruit
+guava
+watermelon
