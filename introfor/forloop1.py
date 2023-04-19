@@ -3,16 +3,9 @@
    learning about for logic"""
 
 # create the list called vendors
-vendors = ["cisco", "juniper", "big_ip", "f5", "arista", "Trey", "google"]
-
-approved_vendors = ["cisco", "juniper", "arista"]
-
-
+vendors = ["cisco", "juniper", "big_ip", "f5", "arista"]
 # loop across the list vendors
-for vendor in vendors:
-    print(f"Our vendor is {vendor}.")
-    if vendor in approved_vendors:
-        print("<= This is an approved vendor!", end="")
-
-print("Our loop has completed.")
+for x in vendors:
+    print("The vendor is:" + x)  # each time through the loop print value of x
+print("\nOur loop has ended.")  # when the loop ends print this
 
