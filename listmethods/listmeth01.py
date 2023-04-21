@@ -15,6 +15,7 @@ def main():
     proto2 = [ 22, 80, 443, 53 ]
     # pass proto2 as an argument to the extend method
     proto.extend(proto2)
+
     print(proto)
 
     # pass proto2 as an argument to the append method

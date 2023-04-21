@@ -19,7 +19,7 @@ def main():
     print( switch["ip"] )          # displays "10.0.1.1"
 
     ## request a 'fake' key
-    print( switch["lynx"] )  # this will cause the program to FAIL  
+    #print( switch["lynx"] )  # this will cause the program to FAIL  
 
 
 # call our main function

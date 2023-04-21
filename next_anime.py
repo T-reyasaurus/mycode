@@ -32,7 +32,6 @@ def main():
         print("Naruto Shippuden is fully extended from 'Naruto' and is that much better")
     else:
         print("You have to type a favor and prefence to recieve details that match your choices")
-        print("Be sure to check your spelling. Don't worry about case")
 
 if __name__ == "__main__":
     main()

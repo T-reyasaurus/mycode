@@ -1,19 +1,21 @@
 #!/usr/bin/python3
-"""Final Python Project"""
+"""Final Project for TLG"""
 
-from pprint import pprint
+birthdays = {
+        "Mom": "February 12",
+        "Dad": "March 2",
+        "Sandy" : "October 7"
+        }
 
-import requests
+def main():
+    print("Hello Trey! Who's birthday do you want to check on?")
+    name = " "
+    while name != "q":
+        name = input(">")
+        if name in birthdays.keys(): 
+            print(birthdays[name])
+        else:
+            print("I didn't find that name.")
 
-url = "https://anime-db.p.rapidapi.com/anime"
-
-querystring = {"page":"1","size":"10","sortBy":"ranking","sortOrder":"asc"}
-
-headers = {
-	"X-RapidAPI-Key": "b7ab5efca6mshb004f071c154defp16bc21jsn088ae64102c2",#this is where your key goes
-	"X-RapidAPI-Host": "anime-db.p.rapidapi.com"
-}
-
-response = requests.request("GET", url, headers=headers, params=querystring)
-
-pprint(response.text)
+if __name__ == "__main__":
+    main()

@@ -15,6 +15,12 @@ def main():
 
     print(f"My {list(trial[2].keys())[0]}! The {list(trial[2].keys())[1]} do {trial[3]}!")
 
+    print(f"My {nightmare[0]['user']['name']['first']}! The {nightmare[0]['kumquat']} do {nightmare[0]['d']}!")
+
+    print(nightmare)
+
+    print(nightmare[0])
+
 
 
 if __name__ == "__main__":
