@@ -1,19 +1,41 @@
 #!/usr/bin/python3
-"""Final Python Project"""
+"""Final Project for TLG"""
 
-from pprint import pprint
+birthdays = {
+        "Mom": "February 12",
+        "Dad": "March 2",
+        "Sandy" : "October 7"
+        }
 
-import requests
+def add_birthday():
+    name = input("Enter name: ").title()
+    date = input("Enter birthday (MM/DD): ")
+    birthdays[name] = date
+    print(name, "'s birthday has been added to the database.")
 
-url = "https://anime-db.p.rapidapi.com/anime"
+def delete_birthday():
+    name = input("Enter name to delete: ").title()
+    if name in birthdays.keys():
+        del birthdays[name]
+        print(name, "'s birthday has been deleted from the database.")
+    else:
+        print("I didn't find that name.")
 
-querystring = {"page":"1","size":"10","sortBy":"ranking","sortOrder":"asc"}
+def main():
+    print("Hello Trey! Who's birthday do you want to check on?")
+    while True:
+        name = input(">").title()
+        if name in birthdays.keys():
+            print(birthdays[name])
+        elif name == "Q":
+            print("Come back if you have a birthday to check on")
+            break
+        elif name == "Add":
+            add_birthday()
+        elif name == "Delete":
+            delete_birthday()
+        else:
+            print("I didn't find that name.")
 
-headers = {
-	"X-RapidAPI-Key": "b7ab5efca6mshb004f071c154defp16bc21jsn088ae64102c2",#this is where your key goes
-	"X-RapidAPI-Host": "anime-db.p.rapidapi.com"
-}
-
-response = requests.request("GET", url, headers=headers, params=querystring)
-
-pprint(response.text)
+if __name__ == "__main__":
+    main()
